@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/wov.css" type="text/css">
+  <link rel="stylesheet" href="/css/palette.css" type="text/css">
+  <meta name="author" content="{{ site.Params.author }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.Params.desc }}">
+  {{- if .Params.tags }}
+  <meta name="keywords" content="{{ site.Params.keywords }}, {{ .Params.tags }}">
+  {{ else }}
+  <meta name="keywords" content="{{ site.Params.keywords }}">
+  {{ end -}}
+  {{ $title := print .Site.Title " | " .Title }}{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}<title>{{ $title }}</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  {{ if fileExists "/static/img/wov/tabicon.svg" }}<link rel="mask-icon" href="/img/wov/tabicon.svg" color="#5f870d">{{ end }}
+  <link rel="icon" sizes="any" href="/img/wov/icon_back.svg">
+</head>
+<body>
+{{ partial "header.html" . }}
+{{ block "main" . }}{{ end }}
+{{ partial "footer.html" . }}
+</body>
+</html>

@@ -1,0 +1,11 @@
+{{- define "main" }}
+<main>
+  <h1 id="title">{{ .Title }}</h1>
+  <article>
+    {{- .Content -}}
+    {{- if (isset .Site.Params "author") }}
+    <div class="date">{{ i18n "by" | title }} Jérémy HERGAULT {{- with .Date }}, {{ i18n "the" }} <time datetime="{{ .Format "2006-01-02" }}" pubdate>{{ . | time.Format ":date_long" }}</time>{{ end }}.</div>
+    {{- end }}
+  </article>
+</main>
+{{ end -}}

@@ -1,0 +1,22 @@
+{{- if ne (.Get 0) "raw" }}
+{{- $htmlTable := .Inner | $.Page.RenderString }}
+{{- $table := "" }}
+{{- if .IsNamedParams }}
+{{- $table = printf "<table class=\"%s\">" (.Get "class") }}
+{{- else if eq (.Get 0) "left" }}
+{{- $table = "<table class=\"fleft\">" }}
+{{- else if eq (.Get 0) "right" }}
+{{- $table = "<table class=\"fright\">" }}
+{{- end }}
+{{ replace $htmlTable "<table>" $table | safeHTML -}}
+{{- else }}
+{{- if .IsNamedParams }}
+{{- printf "<table class=\"%s\">" (.Get "class") }}
+{{- else if eq (.Get 1) "left" }}
+<table class="fleft">
+{{- else if eq (.Get 1) "right" }}
+<table class="fright">
+{{- end }}
+{{- .Inner -}}
+</table>
+{{ end }}

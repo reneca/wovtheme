@@ -1,0 +1,7 @@
+{{- define "main" }}
+  <main>
+{{- range .Pages }}
+{{ .Render "main_item"}}
+{{- end }}
+  </main>
+{{ end -}}

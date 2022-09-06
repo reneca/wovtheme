@@ -1,0 +1,5 @@
+{{- if .IsNamedParams -}}
+<a href="{{ .Get "href" }}"{{ with .Get "color" }} style="color:{{.}};"{{ end }}>{{ .Inner | $.Page.RenderString | safeHTML }}</a>
+{{- else -}}
+<a href="{{ .Get 0 }}">{{ .Inner | $.Page.RenderString | safeHTML }}</a>
+{{- end -}}

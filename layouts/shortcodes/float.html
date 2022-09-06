@@ -1,0 +1,7 @@
+{{- if .IsNamedParams }}
+<div class="{{ .Get "class" }}">
+{{- else }}
+<div class="{{- if eq (.Get 0) "left" }}fleft{{ else if eq (.Get 0) "right" }}fright{{ end }}">
+{{- end }}
+{{ .Inner | markdownify }}
+</div>

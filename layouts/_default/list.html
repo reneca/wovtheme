@@ -1,0 +1,27 @@
+{{- define "main" }}
+  <main>
+    <h1 id="title">{{ .Title }}</h1>
+    <article>
+{{- range .RegularPages }}
+  {{/* TODO Increase size for standalone pages */}}
+  <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+{{- end }}
+{{- range .Pages }}
+  {{- if ne .Pages nil }}
+    <h1 id="{{ lower .Title }}">{{ .Params.description }}</h1>
+    {{- range .RegularPages }}
+      <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+    {{- end }}
+    {{- range .Pages }}
+      {{- if ne .Pages nil }}
+        <h2 id="{{ lower .Title }}">{{ .Params.description }}</h2>
+        {{- range .RegularPages }}
+          <p><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{- end }}
+    </article>
+  </main>
+{{ end -}}

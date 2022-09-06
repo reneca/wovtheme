@@ -1,0 +1,3 @@
+{{ if eq (.Get 0) "p" }}<p>{{ end -}}
+<math>{{ .Inner | safeHTML }}</math>
+{{- if eq (.Get 0) "p" }}</p>{{ end }}

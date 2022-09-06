@@ -1,0 +1,13 @@
+<footer>
+  <div id="social">
+{{- with site.Params.wov_socials -}}
+{{- range $socials := site.Params.wov_socials -}}
+  {{- with $socials.name }}{{ with $socials.url }}
+    <a class="social" href="{{ $socials.url }}"><img class="{{ $socials.name }}" src="/img/wov/{{ $socials.name }}.svg" alt="{{ $socials.name }}"></a>
+  {{- end }}{{ end -}}
+{{- end -}}
+{{- end }}
+  </div>
+  <a class="logolink" href="/"><img class="logo" src="/img/wov/logo.svg" alt="{{ site.Params.title_short }}"></a>
+  <div id="licence"><div id="licence-img"><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/88x31.png" /></a></div><div id="licence-txt">This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/">Creative Commons Attribution-NonCommercial 3.0 Unported License</a>.</div></div>
+</footer>
