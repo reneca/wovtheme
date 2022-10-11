@@ -233,7 +233,7 @@ article > h3 {
 }
 
 article > p {
-  margin: 12px 0px;
+  margin: 9px 0px;
   padding-left: 24px;
 }
 
@@ -277,12 +277,18 @@ article > img, article > table, article > p > img, article > p > table {
 
 article > .highlight {
   display: inline-block;
-  margin: 6px 32px;
+  margin: 3px 32px;
 }
 
 article > .highlight > pre {
   display: block;
+  margin: 0;
   padding: 5px 5px;
+}
+
+article > .highlight > pre > code {
+  display: block;
+  margin: 0;
 }
 
 article > p > code, article > dd > code, article > ul > li > code, article > ol > li > code, article > pre > code {
