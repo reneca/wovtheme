@@ -190,6 +190,11 @@ main > h1#title {
   padding-bottom: 14px;
 }
 
+.main_img {
+  max-height: 260px;
+  max-width: 260px;
+}
+
 .main_item > h1 {
   margin-left: 42px;
 }
