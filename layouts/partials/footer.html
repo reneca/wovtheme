@@ -3,7 +3,7 @@
 {{- with site.Params.wov_socials -}}
 {{- range $socials := site.Params.wov_socials -}}
   {{- with $socials.name }}{{ with $socials.url }}
-    <a class="social" href="{{ $socials.url }}"><img class="{{ $socials.name }}" src="/img/wov/{{ $socials.name }}.svg" alt="{{ $socials.name }}"></a>
+    <a class="social" href="{{ $socials.url }}" tabindex="0"><img class="{{ $socials.name }}" src="/img/wov/{{ $socials.name }}.svg" alt="{{ $socials.name }}"></a>
   {{- end }}{{ end -}}
 {{- end -}}
 {{- end }}

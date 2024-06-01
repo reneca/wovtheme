@@ -5,6 +5,7 @@
   --color-dark-primary-txt: #eeeeee;
   --color-dark-secondary-bg: #616367;
   --color-dark-secondary-txt: #c0bab6;
+  --color-dark-tertiary-bg: #a0a2a6;
 }
 
 /* Specific */
@@ -64,15 +65,23 @@ header {
   background-color: var(--color-dark-primary-bg);
 }
 
-header .logofull {
+header #logofull {
   display: inline-block;
   height: 35px;
   width: 222px;
 }
 
+header #logofull:focus {
+  background-color: var(--color-dark-secondary-bg);
+}
+
 @media (prefers-color-scheme: dark) {
   header {
     background-color: var(--color-dark-scheme-bg);
+  }
+
+  header #logofull:focus {
+    background-color: var(--color-dark-tertiary-bg);
   }
 }
 
@@ -83,27 +92,27 @@ header .logofull {
 }
 
 @media screen {
-  header .logofull {
+  header #logofull {
     margin: 14px 16px 15px;
   }
 }
 
-header .logofull .logo {
+header #logofull .logo {
   height: 35px;
   float: left;
 }
 
-header .logofull .textlogo {
+header #logofull .textlogo {
   height: 35px;
   float: right;
 }
 
 @media screen and (max-width: 800px) {
-  header .logofull .textlogo {
+  header #logofull .textlogo {
     display: none;
   }
 
-  header .logofull {
+  header #logofull {
     width: 43px;
   }
 }
@@ -125,7 +134,7 @@ header .logofull .textlogo {
     float: right;
   }
 
-  header #apps:hover {
+  header #apps:hover, header #apps:focus {
     background-color: var(--color-primary);
   }
 
@@ -161,7 +170,7 @@ header .logofull .textlogo {
     color: var(--color-dark-secondary-txt);
   }
 
-  #appslist > ul > li a:hover {
+  #appslist > ul > li a:hover, #appslist > ul > li a:focus {
     color: var(--color-primary);
   }
 }
@@ -178,6 +187,10 @@ h1#title {
 
 main > h1#title {
   padding: 18px 12px 18px;
+}
+
+.main_link:focus {
+  background-color: var(--color-dark-tertiary-bg);
 }
 
 .main_item {
@@ -253,7 +266,7 @@ article > ul > li > ul, article > ol > li > ul, article > ul > li > ol, article 
 article > blockquote, article > div.todo {
   clear: both;
   margin-left: 40px;
-  border-left: 3px solid #616367;
+  border-left: 3px solid var(--color-dark-secondary-bg);
   padding: 1px 8px;
 }
 
@@ -414,20 +427,24 @@ article > table > tbody > tr td > ul ol {
     margin: 1px 8px;
   }
 
+  footer #social .social:focus {
+    background-color: var(--color-dark-tertiary-bg);
+  }
+
   footer #social .social img {
     height: 26px;
     background-color: var(--color-dark-secondary-bg);
   }
 
-  footer #social .social .twitter:hover {
+  footer #social .social .twitter:hover, footer #social .social .twitter:focus {
     background-color: #5ca7dc;
   }
 
-  footer #social .social .github:hover {
+  footer #social .social .github:hover, footer #social .social .github:focus {
     background-color: white;
   }
 
-  footer #social .social .dockerhub:hover {
+  footer #social .social .dockerhub:hover, footer #social .social .dockerhub:focus {
     background-color: #006fb6;
   }
 
@@ -435,6 +452,10 @@ article > table > tbody > tr td > ul ol {
     display: inline-flex;
     height: 35px;
     margin: 14px 0px 15px;
+  }
+
+  footer .logolink:focus {
+    background-color: var(--color-dark-tertiary-bg);
   }
 
   footer .logo {
