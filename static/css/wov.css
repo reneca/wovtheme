@@ -203,11 +203,6 @@ main > h1#title {
   padding-bottom: 14px;
 }
 
-.main_img {
-  max-height: 260px;
-  max-width: 260px;
-}
-
 .main_item > h1 {
   margin-left: 42px;
 }
@@ -432,7 +427,6 @@ article > table > tbody > tr td > ul ol {
   }
 
   footer #social .social img {
-    height: 26px;
     background-color: var(--color-dark-secondary-bg);
   }
 
@@ -458,10 +452,6 @@ article > table > tbody > tr td > ul ol {
     background-color: var(--color-dark-tertiary-bg);
   }
 
-  footer .logo {
-    height: 35px;
-  }
-
   footer #about {
     height: 26px;
     width: 160px;
@@ -470,39 +460,6 @@ article > table > tbody > tr td > ul ol {
 
   footer > #licence {
     color: var(--color-dark-primary-txt);
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
     margin: 7px 0px 7px 37px;
-  }
-
-  @media (min-width: 600px) {
-    footer > #licence {
-      width: 420px;
-    }
-  }
-
-  @media (max-width: 600px) {
-    footer > #licence {
-      flex-wrap: wrap;
-      margin-left: 9px;
-    }
-  }
-
-  footer > #licence > #licence-img {
-    height: 31px;
-  }
-
-  footer > #licence > #licence-img > a {
-    color: var(--color-dark-primary-txt);
-  }
-
-  footer > #licence > #licence-txt {
-    margin-left: 11px;
-  }
-
-  footer > #licence > #licence-txt > a {
-    color: var(--color-dark-primary-txt);
   }
 }
